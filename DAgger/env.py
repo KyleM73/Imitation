@@ -55,11 +55,6 @@ class Env:
 
         return self.x,dones
 
-    def norm(self,x,dim=1):
-        #mps doesnt have support for torch.linalg.norm()
-        #this silution only partially works, as mps doesnt support torch.argwhere() either
-        return torch.sum(torch.square(x),dim=dim).pow(0.5)
-
     def dynamics(self,t,x,u):
         return torch.einsum("ij,jkl->ikl",self.A,x.view(self.x_dim,1,-1)).view(-1,self.x_dim) + torch.einsum("ij,jkl->ikl",self.B,u.view(self.u_dim,1,-1)).view(-1,self.x_dim) #batch matrix multiply
 
