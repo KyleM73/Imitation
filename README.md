@@ -2,9 +2,9 @@
 - DAgger
     - https://arxiv.org/pdf/1011.0686.pdf
 
-## Requires:
+## Requires
 - torch
-    - see: https://pytorch.org/get-started/locally/
+    - https://pytorch.org/get-started/locally/
 - matplotlib
     - conda install -c conda-forge matplotlib
 - onnx
