@@ -9,3 +9,5 @@
     - conda install -c conda-forge matplotlib
 - onnx
     - conda install -c conda-forge onnx
+- pybullet
+    - conda install -c conda-forge pybullet
